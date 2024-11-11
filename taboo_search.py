@@ -31,7 +31,7 @@ def taboo_search(affectation_matrix, instance, nb_max_iterations=10000, cycle_si
         indices_max = np.argsort(additional_gains)[-nb_values:][::-1]
       else:  # pb == "min"
         indices_max = np.argsort(additional_gains)[:nb_values]
-      ind = indices_max[random.randint(0, nb_values - 1)]
+      ind = indices_max[random.randint(0, len(indices_max) - 1)]
     else:
       print("Invalid search type.")
       return None
